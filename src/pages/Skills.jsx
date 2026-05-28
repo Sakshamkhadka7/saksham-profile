@@ -35,6 +35,7 @@ import { fetchSkills } from "../services/skillsService";
 // Spinner component — shown while API data is loading
 // path: frontend/src/components/Spinner.jsx
 import Spinner from "../components/Spinner";
+import SEO from "../components/SEO";
 
 
 // ═════════════════════════════════════════════════════════════════
@@ -520,6 +521,12 @@ const Skills = () => {
           : "linear-gradient(160deg, #f0f4ff 0%, #e8eeff 60%, #f5f0ff 100%)",
       }}
     >
+      <SEO
+        title="Skills | Saksham Khadka — React, Node.js, MongoDB Developer"
+        description="Technical skills of Saksham Khadka: React.js, Node.js, Express.js, MongoDB, Flutter, Dart, Tailwind CSS, JavaScript, PHP. MERN Stack developer from Nepal."
+        keywords="Saksham Khadka Skills, React Developer, Node.js Developer, MongoDB Nepal, Flutter Developer Nepal, JavaScript Nepal, MERN Stack Skills"
+        canonical="/skills"
+      />
       {/* ── Background glow orbs (decorative) ── */}
       <div
         className="absolute top-16 left-0 w-80 h-80 rounded-full pointer-events-none"

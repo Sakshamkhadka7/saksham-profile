@@ -10,7 +10,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import axiosInstance from "../api/axiosInstance"; // our configured axios instance
-import Spinner from "../components/Spinner";       // loading spinner component
+import Spinner from "../components/Spinner";
+import SEO from "../components/SEO";
 
 // ── Intersection Observer hook ──
 const useInView = (options = {}) => {
@@ -390,7 +391,7 @@ const Projects = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await axiosInstance.get("/projects");
+        const response = await axiosInstance.get("/ ");
         const data = response.data?.data ?? response.data;
         // Normalize DB fields → card fields so cards never crash on missing props
         const normalize = (p) => ({
@@ -492,6 +493,12 @@ const Projects = () => {
           : "linear-gradient(160deg, #f0f4ff 0%, #e8eeff 60%, #f5f0ff 100%)",
       }}
     >
+      <SEO
+        title="Projects | Saksham Khadka — MERN Stack Portfolio"
+        description="Explore full-stack web projects by Saksham Khadka built with React, Node.js, Express, and MongoDB. Real-world apps including e-commerce, APIs, and dashboards."
+        keywords="Saksham Khadka Projects, MERN Stack Projects Nepal, React Projects, Node.js Projects, Full Stack Portfolio Nepal, Web Apps Nepal"
+        canonical="/project"
+      />
       {/* Glow orbs */}
       <div className="absolute top-10 right-0 w-96 h-96 rounded-full pointer-events-none"
         style={{ background: "rgba(108,159,255,0.08)", filter: "blur(100px)" }} />

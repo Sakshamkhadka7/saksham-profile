@@ -9,8 +9,9 @@
 import React, { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import { useTheme } from "../context/ThemeContext";
-import axiosInstance from "../api/axiosInstance"; // axios with baseURL pre-configured
-import Spinner from "../components/Spinner";       // loading spinner
+import axiosInstance from "../api/axiosInstance";
+import Spinner from "../components/Spinner";
+import SEO from "../components/SEO";
 
 // ── Intersection Observer hook ──
 const useInView = (options = {}) => {
@@ -339,6 +340,12 @@ const Home = () => {
         ? "linear-gradient(160deg, #0a0f1e 0%, #0d1533 60%, #0a0f1e 100%)"
         : "linear-gradient(160deg, #f0f4ff 0%, #e8eeff 60%, #f5f0ff 100%)",
     }}>
+      <SEO
+        title="Saksham Khadka | MERN Stack Developer Nepal"
+        description="Hi, I'm Saksham Khadka — a MERN Stack Developer from Kathmandu, Nepal. I build full-stack web apps using React, Node.js, Express, and MongoDB. Available for freelance."
+        keywords="Saksham Khadka, MERN Stack Developer Nepal, Full Stack Developer Kathmandu, React Developer Nepal, Node.js Developer Nepal, JavaScript Developer Nepal, Portfolio"
+        canonical="/"
+      />
 
       {/* ════════════════════════════════
           HERO SECTION

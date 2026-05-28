@@ -8,17 +8,19 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav
+    <header
       className={`w-full fixed top-0 left-0 z-50 backdrop-blur-md shadow-sm transition-colors ${
         darkMode ? "bg-gray-900/90" : "bg-white/80"
       }`}
+      role="banner"
     >
+    <nav aria-label="Main navigation">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex gap-2 items-center">
           <img
             src="assets/sakshamport.jpeg"
-            alt="Logo"
+            alt="Saksham Khadka"
             className="w-10 h-10 rounded-3xl"
           />
           <h1 className={`text-xl font-semibold tracking-wide ${darkMode ? "text-white" : "text-gray-900"}`}>
@@ -118,6 +120,7 @@ const Header = () => {
         </ul>
       </div>
     </nav>
+    </header>
   );
 };
 

@@ -23,6 +23,7 @@ import { motion, AnimatePresence, useInView } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
 import { fetchBlogs } from "../services/blogService";
 import Spinner from "../components/Spinner";
+import SEO from "../components/SEO";
 
 // ESLint doesn't track JSX member expressions (motion.div) as variable usage,
 // so we reference motion once here to prevent a false "defined but never used" error.
@@ -768,6 +769,12 @@ const Blog = () => {
           : "linear-gradient(160deg, #f0f4ff 0%, #e8eeff 60%, #f5f0ff 100%)",
       }}
     >
+      <SEO
+        title="Blog | Saksham Khadka — Web Development Articles Nepal"
+        description="Read web development articles and tutorials by Saksham Khadka. Topics include React, Node.js, MongoDB, full-stack development, and MERN stack tips."
+        keywords="Saksham Khadka Blog, React tutorials Nepal, Node.js articles, MERN Stack blog, Web development Nepal, JavaScript tips"
+        canonical="/blog"
+      />
       {/* Background glow orbs */}
       <div className="absolute top-16 right-0 w-80 h-80 rounded-full pointer-events-none"
         style={{ background: "rgba(108,159,255,0.08)", filter: "blur(100px)" }} />

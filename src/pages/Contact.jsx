@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTheme } from "../context/ThemeContext";
 import axiosInstance from "../api/axiosInstance";
+import SEO from "../components/SEO";
 
 // ── Intersection Observer hook ──
 const useInView = (options = {}) => {
@@ -332,6 +333,12 @@ const Contact = () => {
           : "linear-gradient(160deg, #f0f4ff 0%, #e8eeff 60%, #f5f0ff 100%)",
       }}
     >
+      <SEO
+        title="Contact Saksham Khadka | Hire MERN Stack Developer Nepal"
+        description="Get in touch with Saksham Khadka — MERN Stack developer from Nepal. Available for freelance projects, collaborations, and full-stack web development work."
+        keywords="Contact Saksham Khadka, Hire MERN Stack Developer Nepal, Freelance React Developer Nepal, Full Stack Developer for Hire Nepal"
+        canonical="/contact"
+      />
       <ParticleCanvas darkMode={darkMode} />
 
       {/* Glow orbs */}

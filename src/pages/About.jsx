@@ -49,6 +49,7 @@ import { motion, useInView } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
 import { fetchAbout } from "../services/aboutService";
 import Spinner from "../components/Spinner";
+import SEO from "../components/SEO";
 
 // Prevents a false-positive ESLint "motion is unused" warning.
 // Some ESLint setups don't track JSX member expressions (motion.div)
@@ -428,6 +429,12 @@ const About = () => {
           : "linear-gradient(160deg, #f0f4ff 0%, #e8eeff 60%, #f5f0ff 100%)",
       }}
     >
+      <SEO
+        title="About Saksham Khadka | MERN Stack Developer Nepal"
+        description="Learn about Saksham Khadka — BCSIT student from Nepal, MERN Stack developer. Timeline of my journey from high school to building full-stack web apps."
+        keywords="Saksham Khadka About, BCSIT Nepal, MERN Stack Student Nepal, Full Stack Developer Journey, Web Developer Nepal"
+        canonical="/about"
+      />
       {/* Background glow orbs */}
       <div className="absolute top-20 right-10 w-72 h-72 rounded-full pointer-events-none"
         style={{ background: "rgba(108,159,255,0.1)", filter: "blur(90px)" }} />

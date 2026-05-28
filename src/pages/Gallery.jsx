@@ -44,6 +44,7 @@ import { fetchGallery } from "../services/galleryService";
 // Spinner: reusable loading indicator
 // path: frontend/src/components/Spinner.jsx
 import Spinner from "../components/Spinner";
+import SEO from "../components/SEO";
 
 
 // ═════════════════════════════════════════════════════════════════
@@ -695,6 +696,12 @@ const Gallery = () => {
           : "linear-gradient(160deg, #f0f4ff 0%, #e8eeff 60%, #f5f0ff 100%)",
       }}
     >
+      <SEO
+        title="Gallery | Saksham Khadka — Developer Portfolio Nepal"
+        description="Photo gallery of Saksham Khadka — developer, student, and creator from Kathmandu Nepal. Screenshots, development moments, and creative work."
+        keywords="Saksham Khadka Gallery, Developer Portfolio Nepal, Kathmandu Developer, BCSIT Student Nepal"
+        canonical="/gallery"
+      />
       {/* ── Decorative background glow orbs ── */}
       <div
         className="absolute top-16 right-0 w-96 h-96 rounded-full pointer-events-none"
