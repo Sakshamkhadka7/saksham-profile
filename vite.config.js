@@ -11,11 +11,10 @@ export default defineConfig({
 
     rollupOptions: {
       output: {
-        // Split vendor libraries into a separate chunk for better caching
-        manualChunks: {
-          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'animation-vendor': ['framer-motion', 'aos'],
-          'helmet': ['react-helmet-async'],
+        manualChunks(id) {
+          if (id.includes('react-helmet-async')) return 'helmet';
+          if (id.includes('framer-motion') || id.includes('/aos/')) return 'animation-vendor';
+          if (id.includes('react-dom') || id.includes('react-router-dom')) return 'react-vendor';
         },
       },
     },
