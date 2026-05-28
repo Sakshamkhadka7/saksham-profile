@@ -391,7 +391,7 @@ const Projects = () => {
       try {
         setLoading(true);
         setError(null);
-        const response = await axiosInstance.get("/ ");
+        const response = await axiosInstance.get("/projects");
         const data = response.data?.data ?? response.data;
         // Normalize DB fields → card fields so cards never crash on missing props
         const normalize = (p) => ({
