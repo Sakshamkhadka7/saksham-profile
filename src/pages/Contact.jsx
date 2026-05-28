@@ -606,7 +606,7 @@ const Contact = () => {
                       placeholder="Project collaboration, freelance work..."
                     />
 
-                    {/* Message */}
+                 
                     <div>
                       <Field
                         label="Message"
@@ -626,8 +626,6 @@ const Contact = () => {
                         </span>
                       </div>
                     </div>
-
-                    {/* API error message */}
                     {errors.submit && (
                       <p className="text-xs font-semibold px-3 py-2 rounded-xl"
                         style={{ color: "#f87171", background: "rgba(248,113,113,0.1)", border: "1px solid rgba(248,113,113,0.25)" }}>
