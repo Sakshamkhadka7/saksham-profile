@@ -148,7 +148,8 @@ const Lightbox = ({ item, items, onClose, onPrev, onNext }) => {
       >
         <img
           src={item.src}
-          alt={item.title}
+          alt={item.title ? `Saksham Khadka — ${item.title}` : "Saksham Khadka Photo"}
+          title={item.title ? `Saksham Khadka — ${item.title}` : "Saksham Khadka"}
           className="w-full object-cover"
           style={{ maxHeight: "75vh" }}
         />
@@ -224,7 +225,7 @@ const Lightbox = ({ item, items, onClose, onPrev, onNext }) => {
             >
               <img
                 src={img.thumb}
-                alt=""
+                alt={img.title ? `Saksham Khadka — ${img.title}` : "Saksham Khadka Photo"}
                 className="w-full h-full object-cover"
                 loading="lazy"
               />
@@ -357,7 +358,8 @@ const GalleryCard = ({ item, index, onClick, darkMode }) => {
             This fixes the duplicate-transition bug in the original. */}
       <img
         src={item.thumb}
-        alt={item.title}
+        alt={item.title ? `Saksham Khadka — ${item.title}` : "Saksham Khadka Photo"}
+        title={item.title ? `Saksham Khadka — ${item.title}` : "Saksham Khadka"}
         loading="lazy"
         decoding="async"
         className="w-full h-full object-cover"
@@ -697,9 +699,9 @@ const Gallery = () => {
       }}
     >
       <SEO
-        title="Gallery | Saksham Khadka — Developer Portfolio Nepal"
-        description="Photo gallery of Saksham Khadka — developer, student, and creator from Kathmandu Nepal. Screenshots, development moments, and creative work."
-        keywords="Saksham Khadka Gallery, Developer Portfolio Nepal, Kathmandu Developer, BCSIT Student Nepal"
+        title="Gallery | Saksham Khadka Photos — Developer from Nepal"
+        description="Photos of Saksham Khadka — MERN Stack Developer and BCSIT student from Kathmandu, Nepal. Personal photos, development moments, and creative work."
+        keywords="Saksham Khadka photos, Saksham Khadka images, Saksham Khadka Nepal, MERN Stack Developer Nepal photos, Kathmandu developer photos"
         canonical="/gallery"
       />
       {/* ── Decorative background glow orbs ── */}
