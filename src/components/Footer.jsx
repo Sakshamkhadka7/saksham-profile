@@ -25,7 +25,7 @@ const SOCIALS = [
   },
   {
     label: "LinkedIn",
-    href: "https://linkedin.com/in/sakshamkhadka",
+    href: "https://www.linkedin.com/in/saksham-khadka-9981a4328/",
     color: "#0ea5e9",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
