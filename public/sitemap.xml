@@ -1,53 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://saksham-profile.vercel.app/</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://saksham-profile.vercel.app/assets/sakshamport.jpeg</image:loc>
+      <image:title>Saksham Khadka — MERN Stack Developer Nepal</image:title>
+      <image:caption>Full Stack Developer from Kathmandu, Nepal</image:caption>
+    </image:image>
   </url>
 
   <url>
     <loc>https://saksham-profile.vercel.app/about</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://saksham-profile.vercel.app/project</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://saksham-profile.vercel.app/skills</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-31</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://saksham-profile.vercel.app/blog</loc>
-    <lastmod>2026-05-28</lastmod>
+    <lastmod>2026-05-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://saksham-profile.vercel.app/gallery</loc>
-    <lastmod>2026-05-28</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://saksham-profile.vercel.app/contact</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>yearly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://saksham-profile.vercel.app/contact</loc>
-    <lastmod>2026-05-28</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.7</priority>
+    <loc>https://saksham-profile.vercel.app/gallery</loc>
+    <lastmod>2026-05-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

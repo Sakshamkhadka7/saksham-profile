@@ -1,3 +1,5 @@
+"use client";
+
 // ─────────────────────────────────────────────────────────────
 //  Spinner.jsx
 //  Path: frontend/src/components/Spinner.jsx

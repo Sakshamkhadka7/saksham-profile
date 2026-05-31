@@ -1,15 +1,17 @@
+"use client";
+
 import React from "react";
-import { NavLink } from "react-router-dom";
+import Link from "next/link";
 import { useTheme } from "../context/ThemeContext";
 
 const NAV_LINKS = [
-  { to: "/home",    label: "Home"    },
-  { to: "/about",   label: "About"   },
-  { to: "/project", label: "Projects" },
-  { to: "/gallery", label: "Gallery" },
-  { to: "/skills",  label: "Skills"  },
-  { to: "/blog",    label: "Blog"    },
-  { to: "/contact", label: "Contact" },
+  { href: "/",        label: "Home"    },
+  { href: "/about",   label: "About"   },
+  { href: "/project", label: "Projects" },
+  { href: "/gallery", label: "Gallery" },
+  { href: "/skills",  label: "Skills"  },
+  { href: "/blog",    label: "Blog"    },
+  { href: "/contact", label: "Contact" },
 ];
 
 const SOCIALS = [
@@ -123,15 +125,15 @@ const Footer = () => {
             Quick Links
           </p>
           <ul className="flex flex-col gap-3">
-            {NAV_LINKS.map(({ to, label }) => (
-              <li key={to}>
-                <NavLink
-                  to={to}
+            {NAV_LINKS.map(({ href, label }) => (
+              <li key={href}>
+                <Link
+                  href={href}
                   className="text-sm font-medium transition-colors hover:text-blue-400"
                   style={{ color: muted }}
                 >
                   {label}
-                </NavLink>
+                </Link>
               </li>
             ))}
           </ul>
