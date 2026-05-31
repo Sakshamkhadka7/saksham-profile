@@ -207,6 +207,192 @@ const timeline = [
   { year: "Sem IV · 2025", label: "Building Real Apps", color: "#3ddc97", icon: "🚀", current: true, side: "left" },
 ];
 
+// ── Resume Section Component ──
+const ResumeSection = ({ darkMode }) => {
+  const [headerRef, headerInView] = useInView();
+  const [cardRef, cardInView] = useInView();
+
+  const highlights = [
+    { label: "Languages", value: "JavaScript (ES6+), TypeScript, Dart, PHP", icon: "💻", color: "#6c9fff" },
+    { label: "Frontend", value: "React.js, Tailwind CSS, Redux Toolkit, HTML5/CSS3", icon: "🎨", color: "#f59e0b" },
+    { label: "Backend", value: "Node.js, Express.js, REST API, JWT Authentication", icon: "⚙️", color: "#3ddc97" },
+    { label: "Database", value: "MongoDB, Mongoose ODM, MySQL", icon: "🗄️", color: "#10b981" },
+    { label: "Tools", value: "Git, GitHub, Cloudinary, Vercel, Render, VS Code", icon: "🛠️", color: "#8b5cf6" },
+  ];
+
+  const divider = { borderTop: `1px solid ${darkMode ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.07)"}` };
+
+  return (
+    <section className="relative px-6 md:px-14 py-16 overflow-hidden">
+      <div className="absolute top-10 left-0 w-80 h-80 rounded-full pointer-events-none"
+        style={{ background: "rgba(139,92,246,0.07)", filter: "blur(90px)" }} />
+      <div className="absolute bottom-0 right-0 w-64 h-64 rounded-full pointer-events-none"
+        style={{ background: "rgba(61,110,255,0.06)", filter: "blur(80px)" }} />
+
+      <div className="max-w-5xl mx-auto">
+        <div ref={headerRef}
+          className={`text-center mb-12 transition-all duration-700 ${headerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+          <p className="text-xs uppercase tracking-[0.3em] font-bold mb-3" style={{ color: "#8b5cf6" }}>
+            Download CV
+          </p>
+          <h2 className="text-3xl md:text-4xl font-extrabold mb-4"
+            style={{ fontFamily: "'DM Serif Display', serif", color: darkMode ? "#fff" : "#1a2050" }}>
+            My <em className="not-italic" style={{ color: "#8b5cf6" }}>Resume</em>
+          </h2>
+          <p className="text-sm max-w-md mx-auto"
+            style={{ color: darkMode ? "rgba(255,255,255,0.45)" : "rgba(30,40,80,0.6)" }}>
+            A snapshot of my skills, education, and projects — download the full PDF or view it online.
+          </p>
+        </div>
+
+        <div ref={cardRef}
+          className={`grid grid-cols-1 lg:grid-cols-2 gap-6 transition-all duration-700 ${cardInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+          style={{ transitionDelay: "150ms" }}>
+
+          {/* ── LEFT: Resume highlights ── */}
+          <div className="rounded-2xl p-6"
+            style={{
+              background: darkMode ? "rgba(255,255,255,0.04)" : "rgba(255,255,255,0.9)",
+              border: `1px solid ${darkMode ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.07)"}`,
+              boxShadow: darkMode ? "0 8px 32px rgba(0,0,0,0.3)" : "0 8px 32px rgba(0,0,0,0.06)",
+            }}>
+            <div className="flex items-start gap-4 mb-5 pb-5" style={divider}>
+              <div className="w-12 h-12 rounded-xl overflow-hidden flex-shrink-0"
+                style={{ border: "1px solid rgba(108,159,255,0.3)" }}>
+                <img src="/assets/sakshamport.jpeg" alt="Saksham Khadka" className="w-full h-full object-cover" />
+              </div>
+              <div>
+                <h3 className="font-extrabold text-base"
+                  style={{ fontFamily: "'DM Serif Display', serif", color: darkMode ? "#fff" : "#1a2050" }}>
+                  Saksham Khadka
+                </h3>
+                <p className="text-xs font-bold mt-0.5" style={{ color: "#3ddc97" }}>
+                  MERN Stack Developer · BCSIT Student
+                </p>
+                <p className="text-xs mt-1" style={{ color: darkMode ? "rgba(255,255,255,0.4)" : "rgba(30,40,80,0.5)" }}>
+                  📍 Kathmandu, Nepal
+                </p>
+              </div>
+            </div>
+
+            <div className="space-y-3 mb-5">
+              {highlights.map(({ label, value, icon, color }) => (
+                <div key={label} className="flex items-start gap-3">
+                  <div className="w-7 h-7 rounded-lg flex items-center justify-center text-sm flex-shrink-0"
+                    style={{ background: `${color}20`, border: `1px solid ${color}33` }}>
+                    {icon}
+                  </div>
+                  <div>
+                    <p className="text-xs font-bold" style={{ color }}>{label}</p>
+                    <p className="text-xs leading-relaxed"
+                      style={{ color: darkMode ? "rgba(255,255,255,0.5)" : "rgba(30,40,80,0.6)" }}>
+                      {value}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="pt-4" style={divider}>
+              <p className="text-xs font-bold uppercase tracking-wider mb-2" style={{ color: "#f59e0b" }}>
+                Education
+              </p>
+              <p className="text-xs font-bold" style={{ color: darkMode ? "#fff" : "#1a2050" }}>
+                Bachelor of Computer Science &amp; IT (BCSIT)
+              </p>
+              <p className="text-xs" style={{ color: darkMode ? "rgba(255,255,255,0.4)" : "rgba(30,40,80,0.5)" }}>
+                Quest International College · 2024–2028
+              </p>
+            </div>
+          </div>
+
+          {/* ── RIGHT: CTA card ── */}
+          <div className="rounded-2xl p-6 flex flex-col"
+            style={{
+              background: darkMode
+                ? "linear-gradient(135deg, rgba(61,110,255,0.1) 0%, rgba(139,92,246,0.1) 50%, rgba(61,220,151,0.08) 100%)"
+                : "linear-gradient(135deg, rgba(61,110,255,0.06) 0%, rgba(139,92,246,0.06) 50%, rgba(61,220,151,0.05) 100%)",
+              border: "1px solid rgba(139,92,246,0.25)",
+              boxShadow: darkMode ? "0 8px 32px rgba(0,0,0,0.3)" : "0 8px 32px rgba(139,92,246,0.08)",
+            }}>
+            <div className="flex flex-wrap gap-2 mb-5">
+              {[
+                { text: "2+ Projects Shipped", color: "#6c9fff" },
+                { text: "MERN Trained", color: "#3ddc97" },
+                { text: "Hackathon Winner 🏆", color: "#f59e0b" },
+                { text: "Flutter Certified", color: "#06b6d4" },
+              ].map(({ text, color }) => (
+                <span key={text} className="text-xs font-bold px-3 py-1 rounded-full"
+                  style={{ background: `${color}18`, border: `1px solid ${color}44`, color }}>
+                  {text}
+                </span>
+              ))}
+            </div>
+
+            <p className="text-sm leading-relaxed mb-5 flex-1"
+              style={{ color: darkMode ? "rgba(255,255,255,0.55)" : "rgba(30,40,80,0.65)" }}>
+              BCSIT student with hands-on MERN stack experience — shipped a live LMS with eSewa payment
+              integration, built a personal portfolio, and won an internal college hackathon. Currently
+              exploring TypeScript &amp; Next.js.
+            </p>
+
+            <div className="mb-5 pt-4"
+              style={{ borderTop: `1px solid ${darkMode ? "rgba(255,255,255,0.08)" : "rgba(139,92,246,0.15)"}` }}>
+              <p className="text-xs font-bold uppercase tracking-wider mb-2.5" style={{ color: "#6c9fff" }}>
+                Certifications
+              </p>
+              <div className="space-y-1.5">
+                {[
+                  { text: "MERN Stack Development · Sipalaya Infotech, 2024–2025", icon: "⚡" },
+                  { text: "Flutter Mobile Development · Code IT, 2025", icon: "📱" },
+                  { text: "TEDx Quest International College, 2024", icon: "🎤" },
+                ].map(({ text, icon }) => (
+                  <div key={text} className="flex items-center gap-2 text-xs"
+                    style={{ color: darkMode ? "rgba(255,255,255,0.5)" : "rgba(30,40,80,0.6)" }}>
+                    <span className="flex-shrink-0">{icon}</span>
+                    {text}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3">
+              <a
+                href="/assets/Saksham_Khadka_Resume.pdf"
+                download="Saksham_Khadka_Resume.pdf"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:shadow-xl"
+                style={{ background: "linear-gradient(135deg, #3d6eff, #8b5cf6)", boxShadow: "0 6px 24px rgba(61,110,255,0.35)" }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                  <polyline points="7 10 12 15 17 10"/>
+                  <line x1="12" y1="15" x2="12" y2="3"/>
+                </svg>
+                Download PDF
+              </a>
+              <a
+                href="/assets/Saksham_Khadka_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold transition-all hover:-translate-y-0.5"
+                style={{
+                  background: "transparent",
+                  border: `1px solid ${darkMode ? "rgba(139,92,246,0.4)" : "rgba(139,92,246,0.35)"}`,
+                  color: "#8b5cf6",
+                }}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+                View Online
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
 // ── Main Component ──
 const Home = () => {
   const { darkMode } = useTheme();
@@ -462,6 +648,11 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      {/* ════════════════════════════════
+          RESUME
+      ════════════════════════════════ */}
+      <ResumeSection darkMode={darkMode} />
 
       {/* ════════════════════════════════
           WHAT I DO
