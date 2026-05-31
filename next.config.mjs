@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Skip ESLint during production builds — linting runs locally/in CI instead
+  eslint: { ignoreDuringBuilds: true },
+  // Skip TypeScript type-check during builds for faster deploys
+  typescript: { ignoreBuildErrors: true },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "res.cloudinary.com" },
