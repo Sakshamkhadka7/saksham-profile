@@ -37,12 +37,8 @@ export const metadata = {
   publisher: "Saksham Khadka",
 
   // ── Favicon / Icons ──
-  // Your photo is used as the browser-tab icon and Apple touch icon
-  icons: {
-    icon:       [{ url: "/assets/sakshamport.jpeg", type: "image/jpeg" }],
-    apple:      [{ url: "/assets/sakshamport.jpeg", type: "image/jpeg" }],
-    shortcut:   "/assets/sakshamport.jpeg",
-  },
+  // Next.js auto-serves src/app/icon.jpg and apple-icon.jpg as favicons.
+  // No manual icons config needed — the file presence handles it.
 
   // ── Open Graph (Facebook, WhatsApp, LinkedIn previews) ──
   openGraph: {
