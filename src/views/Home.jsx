@@ -602,19 +602,42 @@ const Home = ({ initialProjects = null }) => {
 
         {/* RIGHT — hidden on mobile, visible from md up */}
         <div className="hidden md:flex relative z-10 flex-col items-end gap-3" data-aos="fade-left" data-aos-duration="900">
-          <div className="relative rounded-2xl overflow-hidden"
+          {/* <div className="relative rounded-2xl overflow-hidden"
             style={{
               width: 210, height: 240,
               border: `0.5px solid ${darkMode ? "rgba(255,255,255,0.12)" : "rgba(30,40,180,0.15)"}`,
               background: darkMode ? "rgba(255,255,255,0.04)" : "rgba(60,80,180,0.04)",
             }}>
-            <img src="/assets/sakshamport.jpeg" alt="Saksham Khadka" className="w-full h-full object-cover" />
+            <img src="/assets/sakshamport2.jpeg" alt="Saksham Khadka" className="w-full h-full object-cover" />
             {["top-0 left-0 border-t-2 border-l-2 rounded-tl", "top-0 right-0 border-t-2 border-r-2 rounded-tr",
               "bottom-0 left-0 border-b-2 border-l-2 rounded-bl", "bottom-0 right-0 border-b-2 border-r-2 rounded-br",
             ].map((cls, i) => (
               <div key={i} className={`absolute w-4 h-4 ${cls}`} style={{ borderColor: "#3d6eff" }} />
             ))}
-          </div>
+          </div> */}
+
+   <div
+  className="relative rounded-2xl overflow-hidden
+             w-[220px] h-[260px]
+             lg:w-[430px] lg:h-[440px]
+             xl:w-[500px] xl:h-[520px]"
+  style={{
+    border: `0.5px solid ${
+      darkMode
+        ? "rgba(255,255,255,0.12)"
+        : "rgba(30,40,180,0.15)"
+    }`,
+    background: darkMode
+      ? "rgba(255,255,255,0.04)"
+      : "rgba(60,80,180,0.04)",
+  }}
+>
+  <img
+    src="/assets/sakshamport2.jpeg"
+    alt="Saksham Khadka"
+    className="w-full h-full object-cover"
+  />
+</div>
 
           <div className="flex flex-wrap gap-2 justify-end max-w-xs">
             {[
