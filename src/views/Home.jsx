@@ -265,7 +265,7 @@ const ResumeSection = ({ darkMode }) => {
               <div>
                 <h3 className="font-extrabold text-base"
                   style={{ fontFamily: "'DM Serif Display', serif", color: darkMode ? "#fff" : "#1a2050" }}>
-                  Saksham Khadka
+                 Mr.Saksham Khadka 
                 </h3>
                 <p className="text-xs font-bold mt-0.5" style={{ color: "#3ddc97" }}>
                   MERN Stack Developer · BCSIT Student
